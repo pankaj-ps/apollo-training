@@ -1,5 +1,3 @@
-// import * as express from 'express';
-// import { ApolloServer,gql} from 'apollo-server-express';
 import { config } from "./config";
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -7,16 +5,14 @@ const { ApolloServer, gql } = require('apollo-server-express');
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Query {
-    user: String
+    user1: String
   }
 `;
-
-
 
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
-    user: () => 'Hello world!',
+    user1: () => 'Hello world!',
   },
 };
 
