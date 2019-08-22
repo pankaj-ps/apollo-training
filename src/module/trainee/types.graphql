@@ -1,0 +1,4 @@
+type Trainee {
+  id: String!
+  name: String!
+}
