@@ -13,8 +13,6 @@ class Trainee extends RESTDataSource {
     async getTrainee() {
         return this.get(`trainee`);
     }
-
-
 }
 
 export default Trainee;

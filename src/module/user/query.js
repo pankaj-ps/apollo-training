@@ -4,8 +4,4 @@ const Query = {
     return user.data;
   }
 }
-
 export default Query;
-
-
-
