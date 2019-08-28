@@ -1,4 +1,20 @@
 type User {
-    name: String!
-    email:String!
+  name: String!
+  email: String!
+  password: String!
+}
+
+type UpdateUserSub {
+  UpdateUser: User!
+}
+
+type Token {
+  massage: String!
+  token: String!
+}
+
+input UserInput {
+  name: String!
+  email: String!
+  password: String!
 }

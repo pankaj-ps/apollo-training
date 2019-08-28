@@ -1,4 +1,12 @@
 type Query {
-    me: User!
-    Trainee:Trainee!
+  me: User!
+  Trainee: Trainee!
+}
+
+type Mutation {
+  updateUsers(input: UserInput): User!
+}
+
+type Subscription {
+  UpdateUserSub: UpdateUserSub!
 }
