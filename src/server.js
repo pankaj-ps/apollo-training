@@ -1,10 +1,12 @@
 const http = require('http');
-const { ApolloServer } = require('apollo-server-express');
+const { ApolloServer ,PubSub} = require('apollo-server-express');
 const express = require('express');
 import { config } from './config';
 import User from './service/user/user';
 import Trainee from './service/trainee/trainee';
 import { typeDefs, resolvers } from './index';
+
+const pubsub = new PubSub();
 
 //define port
 const port = config.port;
@@ -19,7 +21,7 @@ const server = new ApolloServer({
       // check from req
       const token = req.headers.authorization || "";
 
-      return { token };
+      return { token ,pubsub};
     }
   },
   dataSources: () => {
