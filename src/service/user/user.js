@@ -15,6 +15,7 @@ class User extends RESTDataSource {
 async updateUser(user) {
     let userData = { ...user };
    
+   
     return this.put(
       `user/me`, userData);
   }

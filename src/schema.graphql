@@ -8,5 +8,5 @@ type Mutation {
 }
 
 type Subscription {
-  UpdateUserSub: UpdateUserSub!
+  UpdateUserSub: User!
 }

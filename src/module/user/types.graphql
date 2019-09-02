@@ -4,9 +4,6 @@ type User {
   password: String!
 }
 
-type UpdateUserSub {
-  UpdateUser: User!
-}
 
 type Token {
   massage: String!
